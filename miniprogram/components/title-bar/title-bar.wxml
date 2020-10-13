@@ -1,0 +1,4 @@
+<view class="title-style" style="background-color:{{bgColor}}">
+  <van-icon name="{{leftIcon}}" color="{{iconColor}}"/>
+  <text class="text-style" style="color:{{textColor}}">{{title}}</text>
+</view>

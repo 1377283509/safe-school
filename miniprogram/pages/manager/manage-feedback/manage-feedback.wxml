@@ -1,0 +1,20 @@
+<van-tabs active="{{ active }}" bind:change="onChange" color="#0078E0">
+	<van-tab title="未处理">
+		<block wx:for="{{dataList_1}}" wx:key="index">
+			<view class="base">
+				<van-cell value="{{item.date}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/fankui2.png" />
+				<van-cell title="{{item.content}}" />
+				<bottom-bar status="{{item.status}}" isLink="true" url="../../feed-back-detail/feed-back-detail?id={{item._id}}" value="详情"></bottom-bar>
+			</view>
+		</block>
+	</van-tab>
+	<van-tab title="已处理">
+		<view wx:for="{{dataList_2}}" wx:key="index">
+			<view class="base">
+				<van-cell value="{{item.date}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/fankui2.png" />
+				<van-cell title="{{item.content}}" />
+				<bottom-bar status="{{item.status}}" isLink="true" url="../../feed-back-detail/feed-back-detail?id={{item._id}}" value="详情"></bottom-bar>
+			</view>
+		</view>
+	</van-tab>
+</van-tabs>

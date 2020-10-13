@@ -1,0 +1,27 @@
+
+	<view class="card">
+		<bottom-bar status="{{case.status}}" value="" text="{{['已受理','未受理']}}"></bottom-bar>
+	</view>
+	<view class="card">
+		<title-bar leftIcon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/anjian.png" title="报案信息" iconColor="#515151" bgColor="white"></title-bar>
+		<van-field label="报案时间" type="textarea" autosize readonly value="{{case.date}}" />
+		<van-field label="案件描述" type="textarea" autosize readonly value="{{case.desc}}" />
+	</view>
+	<view class="card">
+		<title-bar leftIcon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/xuesheng.png" title="学生信息" iconColor="#515151" bgColor="white"></title-bar>
+		<van-field label="姓名" type="textarea" autosize readonly value="{{case.name}}" />
+		<van-field label="学号" type="textarea" autosize readonly value="{{case.no}}" />
+		<van-field label="电话" type="textarea" autosize readonly value="{{ case.phone }}" bind:click-icon="onTapPhone" right-icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/phone-3.png" />
+		<van-field label="学院" type="textarea" autosize readonly value="{{case.college}}" />
+		<van-field label="班级" type="textarea" autosize readonly value="{{case.class}}" />
+		<van-field label="身份证号" type="textarea" autosize readonly value="{{case.idCardNum}}" />
+		<van-field label="家庭住址" type="textarea" autosize readonly value="{{case.homeAddress}}" />
+		<van-field label="宿舍地址" type="textarea" autosize readonly value="{{case.dormitory}}" />
+	</view>
+	<view class="card">
+		<title-bar leftIcon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/fabu.png" title="在线受理" iconColor="#515151" bgColor="white"></title-bar>
+		<van-field label="留言" type="textarea" autosize readonly="{{status}}" placeholder="请XX时间携带相关材料到XX协助处理" value="{{ case.message }}" bind:change="onInputMessage" />
+	</view>
+	<view class="button" hidden="{{status}}">
+		<van-button type="info" bind:click="onChangeStatus">受理</van-button>
+	</view>

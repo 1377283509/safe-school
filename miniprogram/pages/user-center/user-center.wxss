@@ -1,0 +1,7 @@
+.base{
+  margin:16rpx 16rpx 0rpx 16rpx;
+}
+
+.icon-style{
+  size: 64px;
+}

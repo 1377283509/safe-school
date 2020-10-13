@@ -1,0 +1,11 @@
+<view class="base">
+	<van-field value="{{ date }}" type="textarea" autosize placeholder="格式:xxxx年xx月xx日" label="报案时间" input-align="left" bind:change="onInputDate"></van-field>
+	<van-field value="{{ idCardNum }}" type="textarea" autosize placeholder="请输入身份证号" label="身份证号" maxlength="18" input-align="left" bind:change="onInputIdCardNum"></van-field>
+	<van-field value="{{ homeAddress }}" type="textarea" autosize placeholder="具体到街道门牌号" label="家庭住址" input-align="left" name="homeAddress" bind:change="onInputHomeAddress"></van-field>
+	<van-field value="{{ dormitory }}" type="textarea" autosize placeholder="具体到宿舍号" label="宿舍地址" input-align="left" bind:change="onInputDormitory"></van-field>
+	<van-field value="{{ desc }}" type="textarea" autosize placeholder="请输入案(事)件简述" label="案件简述" input-align="left" bind:change="onInputDesc"></van-field>
+</view>
+
+<view class="button">
+  <van-button form-type="submit" type="info" bind:click="onSubmit">提交</van-button>
+</view>

@@ -1,0 +1,9 @@
+/* 骨架 */
+#sketleton{
+  padding: 10rpx 10rpx;
+}
+
+.card{
+  margin: 16rpx 16rpx 0 16rpx;
+}
+

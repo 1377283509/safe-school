@@ -1,0 +1,13 @@
+.title{
+  margin-left: 24rpx;
+}
+
+.base{
+  margin:16rpx;
+}
+
+.message{
+  width: 100%;
+  text-align: center;
+  margin-top: 24rpx;
+}

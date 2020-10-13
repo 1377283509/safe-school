@@ -1,0 +1,27 @@
+	<view>
+		<van-dropdown-menu active-color="#0078E0">
+			<van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" bind:change="onChangeGender" />
+			<van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" bind:change="onChangeStatus" />
+		</van-dropdown-menu>
+		<view style="width:50%"></view>
+	</view>
+	<view id="sketleton" hidden="{{!isLoading}}">
+		<block wx:for="{{[0,1,2,3,4,5]}}" wx:key="*this">
+			<van-skeleton title avatar row="3" />
+		</block>
+	</view>
+
+	<view>
+		<block wx:for="{{dataList}}" wx:key="index">
+			<view class="card">
+				<title-bar leftIcon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/xinlizixun.png" title="" bgColor="white"></title-bar>
+				<van-field value="{{item.name}}" readonly label="医生" />
+				<van-field value="{{item.gender}}" readonly label="性别" />
+				<van-field value="{{item.freeTime}}" readonly label="预约时间" />
+				<van-cell value="详情" is-link="true" url="../psychologist-details/psychologist-details?id={{item._id}}"></van-cell>
+			</view>
+		</block>
+		<view hidden="{{dataList.length != 0}}" class="message">
+			暂无数据
+		</view>
+	</view>

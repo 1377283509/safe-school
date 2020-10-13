@@ -1,0 +1,19 @@
+<view class="base" wx:if="{{user}}">
+		<title-bar leftIcon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/xuesheng.png" title="{{user.name}}" title-class="title" iconColor="#515151" bgColor="white"></title-bar>
+		<van-cell title="{{user.no}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/id.png" />
+		<van-cell>
+			<view slot="title">
+			<block wx:if="{{ user.canUse }}">
+				<van-tag type="success">可用</van-tag>
+			</block>
+			<block wx:if="{{ !user.canUse }}">
+				<van-tag type="warning">禁用</van-tag>
+			</block>	
+			</view>
+			<van-switch checked="{{ user.canUse }}" size="24px" bind:change="onChangeStatus" data-id="{{item._id}}" />
+		</van-cell>
+	</view>
+
+  <view wx:if="{{!user && !isLoading}}">
+    <text>无此用户</text>
+  </view>

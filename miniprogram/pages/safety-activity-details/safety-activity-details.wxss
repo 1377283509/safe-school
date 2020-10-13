@@ -1,0 +1,20 @@
+#base{
+  margin: 16rpx 16rpx 0 16rpx;
+  background-color: white;
+}
+
+.button{
+  margin: 72rpx 0;
+  width: 100%;
+  text-align: center;
+}
+
+.text-style{
+  color: #F94952;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+
+.label{
+  font-size: 32px;
+}

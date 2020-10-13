@@ -1,0 +1,32 @@
+<view>
+	<map class="map" id="map" show-compass="true" longitude="{{longitude}}" latitude="{{latitude}}" enable-rotate="true" enable-traffic="true" markers="{{ markers }}" bindmarkertap="showMarkerInfo" show-location="true" scale="17">
+	</map>
+</view>
+
+<view class="tools">
+	<block wx:for="{{ menus }}" wx:key="index">
+		<view class="icon-style">
+			<image id="my-position" src="{{ item.icon }}" bindtap="{{ item.onTap }}"></image>
+		</view>
+	</block>
+</view>
+
+<van-popup show="{{ showUserInfo }}" close-on-click-overlay  closeable  position="bottom" width="100%" overlay="{{ false }}" bind:close="onClose">
+	<title-bar leftIcon="user-o" title="用户信息" iconColor="#515151" bgColor="white"></title-bar>
+	<van-cell title="{{userInfo.name}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/xingming.png" />
+	<van-cell title="{{userInfo.no}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/id.png" />
+	<view wx:if="{{ userInfo.tag == 'student' }}">
+		<van-cell title="{{userInfo.class}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/banji_2.png" />
+		<van-cell title="{{userInfo.college}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/xueyuan.png" />
+	</view>
+	<van-cell title="{{userInfo.phone}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/phone-1.png" />
+</van-popup>
+
+<van-popup show="{{ showMarkerInfo }}" position="bottom" width="100%" bind:click-overlay="onClose">
+	<van-field label="时间" value="{{ marker.info.date }}" readonly />
+	<van-field label="经度" value="{{ marker.longitude }}" readonly />
+	<van-field label="纬度" value="{{ marker.latitude}}" readonly />
+	<van-field label="速度" value="{{ marker.info.speed }}" readonly />
+	<van-field label="精确度" value="{{ marker.info.accuracy }}" readonly />
+	<van-cell is-link value="导航到此处" bind:click="pathPlane"/>
+</van-popup>

@@ -1,0 +1,38 @@
+<view class="base" wx:if="{{user.tag == 'student'}}">
+	<title-bar leftIcon="user-o" title="基本信息" iconColor="#515151" bgColor="white"></title-bar>
+	<van-cell title="{{user.name}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/xingming.png" />
+	<van-cell title="{{user.no}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/id.png" />
+	<van-cell title="{{user.class}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/banji_2.png" />
+	<van-cell title="{{user.college}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/xueyuan.png" />
+	<van-cell title="{{user.phone}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/phone-1.png" />
+</view>
+
+<view class="base" wx:if="{{user.tag == 'teacher'}}">
+	<title-bar leftIcon="user-o" title="基本信息" iconColor="#515151" bgColor="white"></title-bar>
+	<van-cell title="{{user.name}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/xingming.png" />
+	<van-cell title="{{user.no}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/id.png" />
+	<van-cell title="{{user.phone}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/phone-1.png" />
+</view>
+
+<view class="base" style="text-align:center">
+	<title-bar leftIcon="user-o" title="认证图片" iconColor="#515151" bgColor="white"></title-bar>
+	<view style="background-color:white" bindtap="onTapImage">
+		<image src="{{user.imageUrl}}" mode="aspectFit"></image>
+	</view>
+</view>
+
+<view class="base">
+	<van-cell>
+		<view slot="title">
+			<block wx:if="{{ user.authStatus == 0 }}">
+				<van-tag type="success">已过审</van-tag>
+			</block>
+			<block wx:if="{{ user.authStatus !=0 }}">
+				<van-tag type="warning">未过审</van-tag>
+			</block>
+		</view>
+		<van-switch checked="{{ user.authStatus == 0 }}" size="24px" bind:change="onChangeStatus" data-id="{{item._id}}" />
+	</van-cell>
+	<van-field label="说明" value="{{ user.authDesc }}" type="textarea" autosize placeholder="情况说明" bind:change="onInput"/>
+</view>
+<van-button type="info" class="button" bind:click="onSave" loading="{{ buttonLoading }}" loading-text="上传中" >保存</van-button>

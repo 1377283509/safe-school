@@ -1,0 +1,12 @@
+<view hidden="{{ isLoading }}">
+	<block wx:for="{{dataList}}" wx:key="index">
+		<view class="base">
+			<title-bar leftIcon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/xuesheng.png" title="{{item.name}}" iconColor="#515151" bgColor="white"></title-bar>
+			<van-cell title="{{item.college}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/xueyuan.png" />
+			<van-cell title="{{item.phone}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/phone-3.png" data-phone="{{item.phone}}" bind:click="onTapPhone" is-link />
+		</view>
+	</block>
+	<view hidden="{{ dataList!=0 }}" class="message">
+		暂无预约
+	</view>
+</view>

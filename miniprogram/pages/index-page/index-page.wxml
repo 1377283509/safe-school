@@ -1,0 +1,37 @@
+
+	<van-search value="{{ searchValue }}" shape="square" background="#0078E0" placeholder="请输入搜索关键词" bind:change="onChange" clearable bind:clear="onClear" bind:search="onSearch" />
+
+	<view class="menu">
+		<van-grid clickable column-num="3" border="{{false}}">
+			<block wx:for="{{menuList}}" wx:key="index">
+				<van-grid-item icon="{{item.icon}}" link-type="navigateTo" url="{{item.path}}" text="{{item.name}}" />
+			</block>
+		</van-grid>
+	</view>
+
+
+	<block wx:for="{{articleList}}" wx:key="index">
+		<view class="article" data-url="{{item.url}}" bindtap="ontapArticle">
+			<view class="info">
+				<view class="title">
+					<text>{{item.title}}</text>
+				</view>
+				<view class="organization">
+					<van-icon name="contact" size="30rpx" />
+					<text decode="true">&nbsp;{{item.organization}}</text>
+						<text class="tag" hidden="{{item.tag==undefiend?true:false}}">{{item.tag}}</text>
+				</view>
+			</view>
+			<view class="image" hidden="{{ !item.imageUrl }}">
+				<image src="{{item.imageUrl}}" mode="aspectFill"></image>
+			</view>
+		</view>
+	</block>
+
+	<view hidden="{{!isLoading & showBottom}}" style="text-align:center;padding:20rpx">
+		<van-loading type="spinner" color="gray" size="28rpx" />
+	</view>
+
+	<view hidden="{{!showBottom}}">
+		<van-divider contentPosition="center">到底了</van-divider>
+	</view>

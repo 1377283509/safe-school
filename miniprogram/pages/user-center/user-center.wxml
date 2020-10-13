@@ -1,0 +1,24 @@
+<view class="base">
+	<title-bar leftIcon="user-o" title="基本信息" iconColor="#515151" bgColor="white"></title-bar>
+	<van-cell title="{{userInfo.name}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/xingming.png" />
+	<van-cell title="{{userInfo.no}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/id.png" />
+	<view wx:if="{{ userInfo.tag == 'student' }}">
+		<van-cell title="{{userInfo.class}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/banji_2.png" />
+		<van-cell title="{{userInfo.college}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/xueyuan.png" />
+	</view>
+	<van-cell title="{{userInfo.phone}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/phone-1.png" />
+</view>
+
+<view class="base">
+	<title-bar leftIcon="orders-o" iconColor="#515151" title="与我相关" bgColor="white"></title-bar>
+	<block wx:for="{{funcList}}" wx:key="index">
+		<van-cell title="{{item.name}}" title-class="title" icon="{{item.icon}}" is-link url="{{item.path}}" />
+	</block>
+</view>
+
+<view class="base">
+	<van-cell title="获取OpenId" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/tuoyuanxing.png" is-link bind:click="onGetOpenId" />
+</view>
+<view class="base">
+	<van-cell title="注销体验账号" label="注销体验账号后，手动重启下小程序即可重新选择体验" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/tuoyuanxing.png" is-link bind:click="onLogout" />
+</view>

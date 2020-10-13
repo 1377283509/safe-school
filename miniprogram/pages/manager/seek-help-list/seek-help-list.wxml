@@ -1,0 +1,9 @@
+<block wx:for="{{dataList}}" wx:key="index">
+  <view class="base">
+    	<title-bar leftIcon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/jinji3.png" title="" bgColor="white"></title-bar>
+				<van-field value="{{item.date}}" readonly label="时间" />
+				<van-field value="{{ item.name }}" readonly label="姓名" />
+				<van-field value="{{ item.phone }}" readonly label="手机" />
+				<van-cell value="详情" is-link="true" url="../../seek-help/seek-help?id={{item._id}}&phone={{ item.phone }}&openId={{ item.openId }}"></van-cell>
+  </view>
+</block>

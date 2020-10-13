@@ -1,0 +1,43 @@
+<!-- 紧急功能 -->
+<view class="base">
+	<title-bar leftIcon="apps-o" title="紧急功能" iconColor="#515151" bgColor="white"></title-bar>
+	<view class="func-list">
+		<van-grid clickable column-num="4" use-slot="true" square="true" border="{{false}}">
+			<block wx:for="{{funcList1}}" wx:key="index">
+				<van-grid-item bind:click="{{item.path}}">
+					<van-icon slot="icon" name="{{item.icon}}" />
+					<text slot="text">{{item.name}}</text>
+				</van-grid-item>
+			</block>
+		</van-grid>
+	</view>
+</view>
+<!-- 基本功能 -->
+<view class="base">
+	<title-bar leftIcon="apps-o" title="基础功能" iconColor="#515151" bgColor="white"></title-bar>
+	<view class="func-list">
+		<van-grid clickable column-num="4" use-slot="true" square="true" border="{{false}}">
+			<block wx:for="{{funcList2}}" wx:key="index">
+				<van-grid-item bind:click="navToFunc" data-path="{{item.path}}">
+					<van-icon slot="icon" name="{{item.icon}}" />
+					<text slot="text">{{item.name}}</text>
+				</van-grid-item>
+			</block>
+		</van-grid>
+	</view>
+</view>
+
+<!-- 管理功能 -->
+<view class="base" hidden="{{ funcList3.length == 0 }}">
+	<title-bar leftIcon="apps-o" title="管理功能" iconColor="#515151" bgColor="white"></title-bar>
+	<view class="func-list">
+		<van-grid clickable column-num="4" use-slot="true" square="true" border="{{false}}">
+			<block wx:for="{{funcList3}}" wx:key="index">
+				<van-grid-item bind:click="navToFunc" data-path="{{item.path}}">
+					<van-icon slot="icon" name="{{item.icon}}" />
+					<text slot="text">{{item.name}}</text>
+				</van-grid-item>
+			</block>
+		</van-grid>
+	</view>
+</view>

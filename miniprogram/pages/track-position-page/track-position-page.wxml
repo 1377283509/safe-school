@@ -1,0 +1,39 @@
+<view>
+	<map class="map" id="map" show-compass="true" longitude="{{longitude}}" latitude="{{latitude}}" enable-rotate="true" enable-traffic="true" markers="{{markers}}" bindmarkertap="showMarkerDetail" polyline="polyline" show-location="true" scale="17"
+	
+	>
+	<!-- subkey="644BZ-3VO3G-YEAQN-IZXQG-ZUO35-O5BTU" -->
+	</map>
+	<view class="help-button" hidden="{{ showTools }}">
+		<van-button type="danger" bind:click="onSeekHelp">求 救</van-button>
+	</view>
+</view>
+
+<!-- 拨号层 -->
+<van-popup show="{{ showPhones }}" bind:click-overlay="onClose" data-tag="phone" custom-style="width:80%" position="center">
+	<block wx:for="{{  phones }}" wx:key="index">
+		<van-cell title="{{item.name}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/phone-2.png" value="{{item.phone}}" is-link data-phone="{{item.phone}}" bind:click="callToPhone" />
+	</block>
+</van-popup>
+
+<!-- 求救弹出层 -->
+<van-popup show="{{ showTools }}" position="bottom" overlay="{{ false }}" bind:close="onClose">
+	<view class="tips">
+		正在上报位置中...
+	</view>
+	<view class="tools">
+		<!-- <view>
+			<image id="luyin" class="icon-style" src="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/luyin.png" bindtap="backToMyPosition"></image>
+		</view> -->
+		<view>
+			<image bindtap="onTapPhone" id="phone-position" class="icon-style" src="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/phone-2.png"></image>
+		</view>
+		<view class="icon-style bg-color-blue">
+			<image id="my-position" src="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/wodeweizhi.png" bindtap="backToMyPosition"></image>
+		</view>
+	</view>
+
+	<view class="cancel-button">
+		<van-button type="default" plain bind:click="onCancelHelp">取消</van-button>
+	</view>
+</van-popup>

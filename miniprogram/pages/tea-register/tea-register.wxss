@@ -1,0 +1,5 @@
+
+#uploadImage{
+  padding: 0 24rpx;
+  background-color: white;
+}

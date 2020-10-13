@@ -1,0 +1,9 @@
+.card{
+  margin:16rpx 16rpx 0 16rpx;
+}
+
+.message{
+  width: 100%;
+  margin-top:24rpx;
+  text-align: center;
+}

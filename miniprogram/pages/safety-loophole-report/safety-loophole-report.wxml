@@ -1,0 +1,29 @@
+<view class="base">
+	<view id="forms">
+		<!-- 隐患类型 -->
+		<van-cell title="隐患类型" is-link value="{{ type }}" bind:click="onChoose" value-class="cell-value" />
+		<!-- action-sheet -->
+		<van-action-sheet show="{{ show }}" actions="{{ actions }}" bind:select="onSelect" />
+		<!-- 地点 -->
+		<van-field value="{{ address }}" type="textarea" clearable label="地点" autosize placeholder="请输入具体地点" bind:input="setAddress" bind:onclear="clearAddress" />
+
+		<!-- 描述 -->
+		<van-field value="{{ description }}" label="描述" type="textarea" clearable placeholder="隐患描述（200字以内）" border="{{ false }}" autosize bind:input="setDescription" bind:onclear="clearDescription" />
+	</view>
+
+	<!-- 图片上传 -->
+	<view id="uploadImage">
+		<van-uploader file-list="{{ imageList }}" bind:after-read="afterRead" accept="image" bind:delete="deleteImage" upload-icon="plus" />
+	</view>
+
+	<!-- 加载组件 -->
+	<view class="uploading" hidden="{{!isloading}}">
+		<van-loading type="spinner" color="lightgrey" size="28rpx" />
+	</view>
+
+	<!-- 上报按钮 -->
+	<view id="button">
+		<van-button type="info" bind:click="onSubmit" size="larger">上报</van-button>
+	</view>
+
+</view>

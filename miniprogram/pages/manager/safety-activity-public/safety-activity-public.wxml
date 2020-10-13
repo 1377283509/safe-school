@@ -1,0 +1,46 @@
+<view class="">
+	<!-- 活动信息 -->
+		<view class="card">
+			<title-bar title="基本信息" bgColor="white" leftIcon="coupon-o" iconColor="black"></title-bar>
+			<van-field name="publisher" value="{{ publisher }}" label="组织者" placeholder="发起者" bind:input="onInputPublisher" />
+			<van-field name="title" value="{{ title }}" label="活动主题" placeholder="活动主题" bind:input="onInputTitle" />
+			<van-field name="address" value="{{ address }}" label="活动地点" placeholder="活动举办地点" bind:input="onInputAddress" />
+			<van-field name="totalNums" value="{{ totalNums }}" label="报名人数" placeholder="活动报名人数" type="number" bind:input="onInputTotalNums" />
+		</view>
+		<!-- 活动时间 -->
+		<view class="card">
+			<title-bar title="活动时间" bgColor="white" leftIcon="clock-o" iconColor="black"></title-bar>
+			<van-cell value="{{ startTime }}" title="开始时间" is-link bind:click="onSelectDate"/>
+		</view>
+		<!-- 活动内容 -->
+		<view class="card">
+			<title-bar title="活动内容" bgColor="white" leftIcon="flag-o" size="large" iconColor="black"></title-bar>
+			<van-field name="content" type="textarea" value="{{ content }}" label="活动内容" placeholder="活动内容" autosize bind:input="onInputContent" />
+		</view>
+		<!-- 活动收获 -->
+		<view class="card">
+			<title-bar title="活动收获" bgColor="white" leftIcon="medal-o" iconColor="black"></title-bar>
+			<van-field name="reward" type="textarea" value="{{ reward }}" label="活动收获" placeholder="参与活动后的收获" autosize bind:input="onInputReward" />
+		</view>
+
+		<!-- 底部弹窗 -->
+		<van-popup show="{{ show }}" position="bottom" custom-style="height: 30%;" bind:close="onClose">
+			<van-datetime-picker type="datetime" value="{{ currentDate }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" formatter="{{formatter}}" bind:input="onInput" bind:confirm="onConfirm" bind:cancel="onCancel" />
+		</van-popup>
+		<!-- 图片上传 -->
+		<view id="uploadImage">
+			<title-bar title="配图上传" bgColor="white" leftIcon="photo-o" iconColor="black"></title-bar>
+			<view class="divider"></view>
+			<van-uploader file-list="{{ imageList }}" bind:after-read="afterRead" accept="image" bind:delete="deleteImage" upload-icon="plus" />
+		</view>
+
+		<!-- 加载组件 -->
+		<view class="uploading" hidden="{{!isloading}}">
+			<van-loading type="spinner" color="white" size="28rpx" />
+		</view>
+
+		<!-- 发布按钮 -->
+		<view id="button">
+			<van-button form-type="submit" loading="{{ buttonLoading }}" loading-text="上传中..." bind:click="onSubmit" size="larger" color="#0078E0">发布</van-button>
+		</view>
+</view>

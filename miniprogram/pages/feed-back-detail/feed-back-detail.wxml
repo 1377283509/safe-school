@@ -1,0 +1,9 @@
+<view class="base">
+	<van-cell value="{{data.date}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/fankui2.png" />
+	<van-cell title="{{data.content}}" />
+</view>
+
+<view class="base">
+	<van-cell title="{{user.name}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/xingming.png" />
+	<van-cell title="{{user.no}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/id.png" />
+</view>

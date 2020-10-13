@@ -1,0 +1,5 @@
+<van-grid clickable column-num="4" gutter="3" square="true">
+	<van-grid-item use-slot wx:for="{{imageList}}" wx:key="index" wx:for-item="url" class="custom-class content-class">
+		<image class="image-style" src="{{url}}" mode="aspectFit" bindtap="onTapImage" data-url="{{url}}" />
+	</van-grid-item>
+</van-grid>

@@ -1,0 +1,147 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"appid": "wx6dd7d07961ea5906",
+	"projectname": "safe-school",
+	"libVersion": "2.10.3",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "db guide",
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "隐患列表",
+					"pathName": "pages/safety-loophole-list/safety-loophole-list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "隐患上报",
+					"pathName": "pages/safety-loophole-report/safety-loophole-report",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "隐患详情",
+					"pathName": "pages/safety-loophole-details/safety-loophole-details",
+					"query": "id=6aebd2215e8ece74006882a506161ad1&userId=dc65fe3e5e8ecf1b00554bfd696790e7",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "创建活动",
+					"pathName": "pages/safety-activity-public/safety-activity-public",
+					"query": "id=6aebd2215e8ece74006882a506161ad1&userId=dc65fe3e5e8ecf1b00554bfd696790e7",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "活动列表",
+					"pathName": "pages/safety-activity-list/safety-activity-list",
+					"query": "id=6aebd2215e8ece74006882a506161ad1&userId=dc65fe3e5e8ecf1b00554bfd696790e7",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "注册页",
+					"pathName": "pages/register/register",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "功能页",
+					"pathName": "pages/funcs-page/funcs-page",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "定位追踪",
+					"pathName": "pages/track-position-page/track-position-page",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "添加心理咨询师",
+					"pathName": "pages/append-psychologist/append-psychologist",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 10,
+					"name": "发布文章",
+					"pathName": "pages/manager/public-article/public-article",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "文章管理",
+					"pathName": "pages/manager/manage-article/manage-article",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 12,
+					"name": "pages/seek-help/seek-help",
+					"pathName": "pages/seek-help/seek-help",
+					"query": "id=63f196b95ee1ed8c000000ba32d1efa5&phone=1212&openId=oXsKf4rMVzb2gEbUNcrLM5dhlLQ8",
+					"scene": null
+				}
+			]
+		}
+	}
+}

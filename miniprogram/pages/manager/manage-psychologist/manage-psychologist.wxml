@@ -1,0 +1,23 @@
+<view class="searchBar">
+	<van-search value="{{ searchKey }}" placeholder="请输入姓名或手机号" />
+</view>
+<view class="message" hidden="{{list}}">
+	未添加心理医生
+</view>
+<view class="list" hidden="{{!list}}">
+	<block wx:for="{{list}}" wx:key="index">
+		<view class="card">
+			<van-cell label="{{item.gender}}  {{item.phone}}" title-class="title" icon="user-o" center="true" is-link url="../edit-psychologist/edit-psychologist?id={{item._id}}">
+				<view slot="title">
+					<text style="margin-right:12rpx">{{item.name}}</text>
+					<block wx:if="{{ item.status }}">
+						<van-tag type="success">可预约</van-tag>
+					</block>
+					<block wx:if="{{ !item.status }}">
+						<van-tag type="warning">不可预约</van-tag>
+					</block>
+				</view>
+			</van-cell>
+		</view>
+	</block>
+</view>

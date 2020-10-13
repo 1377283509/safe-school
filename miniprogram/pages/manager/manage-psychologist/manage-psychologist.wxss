@@ -1,0 +1,17 @@
+.title{
+  margin-left: 24rpx;
+}
+
+.card{
+  margin-top: 16rpx;
+}
+
+.tag{
+  margin-left: 12rpx;
+}
+
+.message{
+  margin-top: 24rpx;
+  width: 100%;
+  text-align: center;
+}

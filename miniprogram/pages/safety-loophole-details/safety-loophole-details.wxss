@@ -1,0 +1,37 @@
+.card {
+  margin:20rpx;
+  background-color: white;
+}
+
+.user-card {
+  margin-top: 20rpx;
+  padding: 16rpx 24rpx;
+}
+
+.user-info {
+  margin-left: 28rpx;
+  margin-top: 10rpx;
+  float: left;
+}
+
+.user-name {
+  flex: 1;
+  height: min-content;
+  color: black;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.user-college {
+  flex: 1;
+  height: min-content;
+  padding-right: 20rpx;
+  color: gray;
+  font-size: 24rpx;
+}
+
+.button{
+  width: 100%;
+  text-align: center;
+  margin: 72rpx 0;
+}

@@ -1,0 +1,30 @@
+<view class="base">
+  <!-- 信息输入 -->
+	<van-field value="{{ name }}" placeholder="请输入姓名" label="姓名" name="name" input-align="right" bind:change="onInputName" />
+	<van-field value="{{ stuNo }}" type="number" placeholder="请输入学号" label="学号" input-align="right" name="stuNo" bind:change="onInputNumber" bind:blur="checkExist" />
+	<van-field value="{{ phone }}" placeholder="请输入手机号" label="手机" input-align="right" name="phone" type="number" bind:change="onInputPhone" />
+	<van-cell title="学院" value="{{college}}" is-link data-type="0" bind:click="onSelect"></van-cell>
+	<van-cell title="班级" value="{{className}}" is-link data-type="1" bind:click="onSelect"></van-cell>
+
+	<!-- 上传图片 -->
+	<view id="uploadImage">
+		<title-bar title="学生证照片" bgColor="white" leftIcon="photo-o" iconColor="black"></title-bar>
+		<view class="divider"></view>
+		<van-uploader file-list="{{ imageUrl }}" max-count="1" bind:after-read="afterRead" accept="image" bind:delete="deleteImage" upload-icon="plus" />
+	</view>
+
+		<!-- 加载组件 -->
+	<view class="uploading" hidden="{{!isloading}}">
+		<van-loading type="spinner" color="lightgrey" size="28rpx" />
+	</view>
+	
+  <!-- 选择器组件 -->
+	<van-popup show="{{ show }}" position="bottom" custom-style="height: 30%;">
+		<van-picker columns="{{ columns }}" show-toolbar confirm-button-text="确认" bind:confirm="onConfirm" />
+	</van-popup>
+</view>
+
+
+<view class="button">
+<van-button type="info" bind:click="onSubmit" loading="{{ buttonLoading }}" loading-text="上传中">认证</van-button>
+</view>

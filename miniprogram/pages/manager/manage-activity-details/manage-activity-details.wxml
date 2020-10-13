@@ -1,0 +1,22 @@
+<view id="base">
+	<title-bar leftIcon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/laba.png" title="活动信息" iconColor="#515151" bgColor="white"></title-bar>
+	<bottom-bar status="{{activity.status}}" value="" text="{{['筹备中','已结束']}}"></bottom-bar>
+	<van-cell icon="friends-o" title="组织者" value="{{activity.publisher}}"></van-cell>
+	<van-cell icon="location-o" title="地址" value="{{activity.address}}"></van-cell>
+	<van-cell icon="clock-o" title="开始时间" value="{{activity.startTime}}"></van-cell>
+	<van-cell icon="bar-chart-o" title="总人数" value="{{activity.totalNums}}人"></van-cell>
+	<van-cell icon="bar-chart-o" title="已报人数" value="{{curNums}}人"></van-cell>
+	<van-cell icon="notes-o" title="活动内容" label-class="label" label="{{activity.content}}" />
+	<van-cell icon="medal-o" title="活动收获" label="{{activity.reward}}" />
+	<van-cell icon="comment-o" title="活动公告" label-class="label" label="{{ activity.message?activity.message:'暂无公告' }}" />
+</view>
+
+<view id="base">
+	<image-list imageList="{{activity.imageList}}"></image-list>
+</view>
+
+<view id="base">
+	<title-bar leftIcon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/guanli_1.png" title="活动管理" iconColor="#515151" bgColor="white"></title-bar>
+	<van-cell icon="edit" title="编辑公告" is-link url="../edit-notice/edit-notice?id={{activity._id}}"/>
+	<van-cell icon="friends-o" title="查看成员" is-link url="../activity-members/activity-menmbers?id={{activity._id}}"/>
+</view>

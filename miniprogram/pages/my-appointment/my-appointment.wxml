@@ -1,0 +1,13 @@
+
+	<view class="base" hidden="{{ !data }}">
+		<title-bar leftIcon="user-o" title="心理医生" iconColor="#515151" bgColor="white"></title-bar>
+		<van-cell title="{{data.name}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/xingming.png" />
+		<van-cell title="{{data.gender}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/xingbie.png" />
+		<van-cell title="{{data.phone}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/phone-2.png" bind:click="onTapPhone" is-link />
+		<van-cell title="{{data.freeTime}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/shijian.png" />
+	</view>
+
+
+<view hidden="{{ !showTip }}" class="message">
+	暂无预约
+</view>

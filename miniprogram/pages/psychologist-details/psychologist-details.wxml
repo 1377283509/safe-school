@@ -1,0 +1,11 @@
+<view class="base">
+	<bottom-bar status="{{data.status}}" value="" text="{{['接受预约','暂不接受预约']}}"></bottom-bar>
+	<van-cell title="姓名" label="{{data.name}}" />
+	<van-cell title="性别" label="{{data.gender}}" />
+	<van-cell title="预约时间" label="{{data.freeTime}}" />
+	<van-cell title="个人介绍" label="{{data.desc}}" />
+	<view class="message">注意：已有预约后不可再次预约且预约时间仅限本周，预约成功后不可取消预约，如有冲突可电话联系医生进行调整，电话可在预约后到个人中心进行查看。</view>
+	<view class="button">
+		<van-button type="info" disabled="{{!data.status}}" bind:click="onTapBook">预约</van-button>
+	</view>
+</view>

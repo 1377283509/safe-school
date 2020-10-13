@@ -1,0 +1,23 @@
+<view>
+	<block wx:for="{{appointmentList}}" wx:key="index">
+		<view class="card">
+			<van-cell 
+        title="{{ psychologistList[index].name }}" 
+        title-class="title-style" 
+        value="{{ psychologistList[index].phone }}" 
+        icon="../../images/icon/xinlizixun.png"
+        >
+      </van-cell>
+			<van-cell 
+        title="{{ userList[index].name }}" 
+        title-class="title-style" 
+        label="{{ userList[index].college }}" 
+        center 
+        icon="../../images/icon/xuesheng.png" 
+        is-link
+        url="../appointment-details/appointment-details?id={{item._id}}"
+        >
+      </van-cell>
+		</view>
+	</block>
+</view>

@@ -1,0 +1,53 @@
+.menu{
+  margin: 16rpx 16rpx 0 16rpx;
+}
+
+.article{
+  margin:16rpx 16rpx 0 16rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding:16rpx 8rpx;
+  border-radius: 2px;
+}
+
+.info{
+  min-height: 160rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title{
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+}
+
+.tag{
+  margin-left: 16rpx;
+  background-color: orange;
+  color: white;
+  font-size: 18rpx;
+  width: fit-content;
+  padding: 2rpx 8rpx;
+  margin-top: 4rpx;
+}
+
+.organization{
+  margin-top: 18rpx;
+  margin-left: 16rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  font-size: 22rpx;
+  color:gray;
+}
+
+.image image{
+  width: 250rpx;
+  height: 160rpx;
+}

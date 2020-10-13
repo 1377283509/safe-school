@@ -1,0 +1,11 @@
+.message{
+  font-size: small;
+  color: gray;
+  margin-top: 36rpx;
+  text-align: center;
+}
+.status-icon{
+  margin-top: 100rpx;
+  width: 100%;
+  text-align: center;
+}

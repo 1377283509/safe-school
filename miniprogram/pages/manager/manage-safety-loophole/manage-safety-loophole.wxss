@@ -1,0 +1,11 @@
+.card{
+  margin: 16rpx 16rpx 0 16rpx;
+  padding-top: 10rpx;
+  background-color: white;
+}
+
+.message{
+  width: 100%;
+  text-align: center;
+  margin-top:24rpx;
+}

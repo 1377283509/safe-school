@@ -1,0 +1,23 @@
+<!-- 鱼骨屏 -->
+<view id="sketleton" hidden="{{!isLoading}}">
+	<block wx:for="{{[0,1,2,3,4,5]}}" wx:key="*this">
+		<van-skeleton title avatar row="3" />
+	</block>
+</view>
+
+<!-- 内容 -->
+<view id="base">
+	<block wx:for="{{list}}" wx:key="index">
+		<view class="card">
+			<title-bar leftIcon="fire" title="{{item.title}}" iconColor="#F94852" bgColor="white"></title-bar>
+			<van-cell icon="location-o" title="{{item.address}}"></van-cell>
+			<van-cell icon="clock-o" title="{{item.startTime}}"></van-cell>
+			<van-cell icon="volume-o" title="{{item.message}}"></van-cell>
+			<bottom-bar status="{{item.status}}" value="" text="{{['筹备中','已结束']}}" isLink="true" url="../safety-activity-details/safety-activity-details?id={{item._id}}" value="详情"></bottom-bar>
+		</view>
+	</block>
+</view>
+
+<view hidden="{{!isLoading}}" style="text-align:center;padding:20rpx">
+	<van-loading type="spinner" color="gray" size="28rpx" />
+</view>

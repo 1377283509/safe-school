@@ -1,0 +1,15 @@
+<view>
+	<block wx:for="{{dataList}}" wx:key="index">
+		<view class="card">
+			<bottom-bar status="{{item.status}}" text="{{['已受理','未受理']}}" value="{{item.date}}"></bottom-bar>
+			<van-field label="案件描述" type="textarea" autosize readonly value="{{item.desc}}" />
+			<view hidden="{{!item.status}}">
+				<van-field label="回复" type="textarea" autosize readonly value="{{item.message}}" />
+			</view>
+		</view>
+	</block>
+</view>
+
+<view hidden="{{ !showTip }}" class="message">
+	暂无预约
+</view>

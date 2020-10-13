@@ -1,0 +1,26 @@
+<wxs module="dateFormat" src="../../../utils/dateFormate.wxs"></wxs>
+<view class="base">
+	<block wx:for="{{ articleList }}" wx:key="index">
+		<view class="panel-style">
+			<title-bar leftIcon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/wenzhang.png" title="{{item.title}}" bgColor="white"></title-bar>
+			<van-cell icon="friends-o" title="{{item.organization}}"></van-cell>
+			<block wx:if="{{ item.tag }}">
+				<van-cell icon="label-o" title="{{item.tag}}"></van-cell>
+			</block>
+			<van-cell icon="clock-o" title="{{ dateFormat.toDate(item.pubDate,'yyyy.MM.dd') }}"></van-cell>
+			<view class="foot-btn">
+				<text class="button-style default-btn" bindtap="onEdit" data-id="{{ item._id }}">
+        编辑
+        </text>
+				<text class="button-style warn-btn" bindtap="onDelete" data-id="{{ item._id }}">
+        删除</text>
+			</view>
+		</view>
+	</block>
+	<view hidden="{{!isLoading & showBottom}}" style="text-align:center;padding:20rpx">
+		<van-loading type="spinner" color="gray" size="28rpx" />
+	</view>
+	<view hidden="{{!showBottom}}">
+		<van-divider contentPosition="center">到底了</van-divider>
+	</view>
+</view>

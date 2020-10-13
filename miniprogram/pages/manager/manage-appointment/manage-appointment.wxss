@@ -1,0 +1,7 @@
+.title-style{
+  margin-left: 24rpx;
+}
+
+.card{
+  margin:16rpx 16rpx 0 16rpx;
+}

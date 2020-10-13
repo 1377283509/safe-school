@@ -1,0 +1,21 @@
+<van-tabs active="{{ active }}" bind:change="onChange" color="#0078E0">
+	<van-tab title="待审核">
+		<block wx:for="{{dataList_1}}" wx:key="index">
+			<view class="base">
+				<van-cell title="{{item.name}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/xuesheng.png" />
+				<van-cell title="{{item.no}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/id.png" />
+				<van-cell is-link value="详情" url="../review-user-details/review-user-details?id={{item._id}}" />
+			</view>
+		</block>
+	</van-tab>
+
+	<van-tab title="已审核">
+		<view wx:for="{{dataList_2}}" wx:key="index">
+			<view class="base">
+				<van-cell title="{{item.name}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/xuesheng.png" />
+				<van-cell title="{{item.no}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/id.png" />
+				<van-cell is-link value="详情" url="../review-user-details/review-user-details?id={{item._id}}" />
+			</view>
+		</view>
+	</van-tab>
+</van-tabs>

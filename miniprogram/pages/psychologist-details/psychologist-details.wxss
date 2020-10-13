@@ -1,0 +1,15 @@
+.base{
+  margin:16rpx;
+}
+
+.button{
+  margin-top: 72rpx;
+  width: 100%;
+  text-align: center;
+}
+
+.message{
+  font-size: 24rpx;
+  color: gray;
+  padding: 16rpx;
+}

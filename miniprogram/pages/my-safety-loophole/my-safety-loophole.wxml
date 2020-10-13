@@ -1,0 +1,25 @@
+	<view>
+		<van-dropdown-menu active-color="#0078E0">
+			<van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" bind:change="onChangeStatus" />
+		</van-dropdown-menu>
+		<view style="width:50%"></view>
+	</view>
+	<view id="sketleton" hidden="{{!isLoading}}">
+		<block wx:for="{{[0,1,2,3,4,5]}}" wx:key="*this">
+			<van-skeleton title avatar row="3" />
+		</block>
+	</view>
+
+	<view id="list" hidden="{{isloading}}">
+		<block wx:for="{{dataList}}" wx:key="index" wx:for-item="item">
+			<view class="card">
+				<title-bar title="{{item.address}}" iconColor="#0078E0" bgColor="white"></title-bar>
+				<content-cell title="类型" value="{{item.type}}"></content-cell>
+				<content-cell title="描述" content="{{item.description}}"></content-cell>
+				<bottom-bar status="{{item.status}}" isLink="true" url="../safety-loophole-details/safety-loophole-details?id={{item._id}}&isAdmin=false"></bottom-bar>
+			</view>
+		</block>
+	</view>
+	<view hidden="{{dataList.length != 0}}" class="message">
+		暂无数据
+	</view>

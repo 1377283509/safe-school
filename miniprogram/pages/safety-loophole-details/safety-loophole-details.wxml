@@ -1,0 +1,14 @@
+<!-- 隐患信息 -->
+<view class="card">
+	<bottom-bar status="{{item.status}}" value="{{item.publicTime}}"></bottom-bar>
+	<van-cell title="类型" label="{{item.type}}" />
+	<van-cell title="地点" label="{{item.address}}" />
+	<van-cell title="描述" label="{{item.description}}" />
+	<image-list imageList="{{imageList}}"></image-list>
+</view>
+
+<view class="button" hidden="{{ !isAdmin }}">
+	<block wx:if="{{!item.status}}">
+		<van-button type="info" disabled="{{ false }}" bind:click="onTap">已处理</van-button>
+	</block>
+</view>

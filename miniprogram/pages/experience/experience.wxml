@@ -1,0 +1,19 @@
+
+	<view class="status-icon">
+		<icon type="info" size="70" color="#F94952"></icon>
+	</view>
+	<view class="message">体验账号创建成功后，需手动重启进入</view>
+	<view id="buttons">
+		<view class="button">
+			<van-button type="info" data-tag="-1" bind:click="onTapButton">体验普通用户</van-button>
+		</view>
+		<view class="button">
+			<van-button type="info" data-tag="0" bind:click="onTapButton">体验普通管理员</van-button>
+		</view>
+		<view class="button">
+			<van-button type="info" data-tag="1" bind:click="onTapButton">体验专项管理员</van-button>
+		</view>
+		<view class="button">
+			<van-button type="info" data-tag="2" bind:click="onTapButton">体验高级管理员</van-button>
+		</view>
+	</view>

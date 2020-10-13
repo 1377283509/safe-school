@@ -1,0 +1,18 @@
+.image-style{
+  width: 100%; 
+  object-fit: cover;
+}
+
+.custom-class{
+  padding:0;
+}
+.content-class{
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}

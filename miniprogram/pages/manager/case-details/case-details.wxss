@@ -1,0 +1,9 @@
+.card{
+  margin:16rpx 16rpx 0 16rpx;
+}
+
+.button{
+  width: 100%;
+  margin:72rpx 0rpx;
+  text-align: center;
+}

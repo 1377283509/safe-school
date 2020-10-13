@@ -1,0 +1,25 @@
+	<view>
+		<van-dropdown-menu active-color="#0078E0">
+			<van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" bind:change="onChangeStatus" />
+		</van-dropdown-menu>
+		<view style="width:50%"></view>
+	</view>
+	<view id="sketleton" hidden="{{!isLoading}}">
+		<block wx:for="{{[0,1,2,3,4,5]}}" wx:key="*this">
+			<van-skeleton title avatar row="3" />
+		</block>
+	</view>
+
+	<view>
+		<block wx:for="{{dataList}}" wx:key="index">
+			<view class="card">
+				<title-bar leftIcon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/laba.png" title="{{item.title}}" bgColor="white"></title-bar>
+				<van-field value="{{item.publisher}}" readonly label="组织者" />
+				<van-field value="{{item.startTime}}" readonly label="开始时间" />
+				<bottom-bar status="{{item.status}}" value="" text="{{['筹备中','已结束']}}" isLink="true" url="../manage-activity-details/manage-activity-details?id={{item._id}}" value="详情"></bottom-bar>
+			</view>
+		</block>
+		<view hidden="{{dataList.length != 0}}" class="message">
+			未发布过活动
+		</view>
+	</view>

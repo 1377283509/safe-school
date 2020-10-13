@@ -1,0 +1,28 @@
+<view id="base">
+	<bottom-bar status="{{activity.status}}" value="" text="{{['筹备中','已结束']}}"></bottom-bar>
+	<van-cell icon="friends-o" title="组织者" value="{{activity.publisher}}"></van-cell>
+	<van-cell icon="location-o" title="地址" value="{{activity.address}}"></van-cell>
+	<van-cell icon="clock-o" title="开始时间" value="{{activity.startTime}}"></van-cell>
+	<van-cell icon="bar-chart-o" title="总人数" value="{{activity.totalNums}}人"></van-cell>
+	<van-cell icon="bar-chart-o" title="已报人数" value="{{curNums}}人"></van-cell>
+	<van-cell icon="notes-o" title="活动内容" label-class="label" label="{{activity.content}}" />
+	<van-cell icon="medal-o" title="活动收获" label="{{activity.reward}}" />
+</view>
+
+<view id="base">
+	<image-list imageList="{{activity.imageList}}"></image-list>
+</view>
+
+<view class="button" wx:if="{{!hasRegisted}}">
+	<van-button type="info" disabled="{{!activity.status || activity.users.length==activity.totalNums}}" bind:click="onApply">报名</van-button>
+	<block wx:if="{{!activity.status}}">
+		<view class="text-style">*活动已结束</view>
+	</block>
+	<block wx:if="{{activity.users.length==activity.totalNums}}">
+		<view class="text-style">*活动报名人数已满</view>
+	</block>
+</view>
+
+<view class="button" wx:if="{{hasRegisted}}">
+	<van-button type="info" disabled="true">已报名</van-button>
+</view>

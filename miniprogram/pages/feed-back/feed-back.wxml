@@ -1,0 +1,5 @@
+		<van-field type="textarea" autosize placeholder="写下您宝贵的建议" value="{{ message }}" bind:change="onInputMessage" />
+
+		<view class="button">
+			<van-button type="info" bind:click="onPublic" loading="{{ buttonLoading }}" loading-text="提交中" >提交</van-button>
+		</view>

@@ -1,0 +1,19 @@
+<view class="card">
+	<bottom-bar status="{{status}}" value="" text="{{['完成','未完成']}}"></bottom-bar>
+</view>
+<view class="card">
+	<title-bar leftIcon="../../images/icon/xuesheng.png" title="学生信息" iconColor="#515151" bgColor="white"></title-bar>
+	<van-field label="姓名" readonly value="{{user.name}}" />
+	<van-field label="学号" readonly value="{{user.no}}" />
+	<van-field label="学院" readonly value="{{user.college}}" />
+	<van-field label="班级" readonly value="{{user.class}}" />
+	<van-field label="手机" readonly value="{{user.phone}}" />
+</view>
+
+<view class="card">
+	<title-bar leftIcon="../../images/icon/xinlizixun.png" title="医生信息" iconColor="#515151" bgColor="white"></title-bar>
+	<van-field label="姓名" readonly value="{{psychologist.name}}" />
+	<van-field label="性别" readonly value="{{psychologist.gender}}" />
+	<van-field label="电话" readonly value="{{psychologist.phone }}" />
+	<van-field label="预约时间" readonly value="{{psychologist.freeTime }}" />
+</view>

@@ -1,0 +1,15 @@
+<view class="base">
+	<van-field value="{{ name }}" type="textarea" autosize placeholder="请输入姓名" label="姓名" input-align="left" bind:change="onInputName"></van-field> 
+	<van-field label="性别" value="{{gender}}" readonly right-icon="arrow"  bind:click-icon="onSelectGender"></van-field> 
+	<van-field value="{{ phone }}" type="textarea" autosize placeholder="请输入手机号" label="手机号" input-align="left" bind:change="onInputPhone"></van-field> 
+   <van-field value="{{ freeTime }}" type="textarea" autosize placeholder="请输入预约时间段" label="预约时间" input-align="left" bind:change="onInputFreetime"></van-field> 
+	<van-field value="{{ desc }}" type="textarea" autosize placeholder="请输入个人介绍" label="个人介绍" input-align="left" bind:change="onInputDesc"></van-field> 
+</view>
+
+<van-popup show="{{ showGenderPicker }}" position="bottom" custom-style="height:30%;">
+	<van-picker columns="{{ genders }}" show-toolbar bind:confirm="onConfirmGender" bind:cancel="onCancel"/>
+</van-popup>
+
+<view class="button-style">
+	<van-button type="info" bind:click="onAppend">添加</van-button>
+</view>

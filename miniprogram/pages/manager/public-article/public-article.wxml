@@ -1,0 +1,23 @@
+<view class="base">
+	<van-field label="标题" value="{{ title }}" type="textarea" autosize required placeholder="文章标题" bind:change="onInputTitle" />
+	<van-field label="标签" value="{{ tag }}" type="textarea" autosize placeholder="内容概括" bind:change="onInputTag" />
+	<van-field label="组织" value="{{ organization }}" type="textarea" autosize required placeholder="发布组织" bind:change="onInputOrg" />
+	<van-field label="url" value="{{ url }}" type="textarea" autosize required placeholder="文章地址" bind:change="onInputUrl" />
+</view>
+
+<view class="base">
+	<!-- 图片上传 -->
+	<van-field label="配图上传" type="text" disabled />
+	<view style="margin-top:20rpx"></view>
+	<view id="uploadImage">
+		<van-uploader file-list="{{ imageList }}" bind:after-read="afterRead" accept="image" disabled="{{ imageUrl }}" bind:delete="deleteImage" upload-icon="plus" />
+	</view>
+	<!-- 加载组件 -->
+	<view class="uploading" hidden="{{!isloading}}">
+		<van-loading type="spinner" color="lightgrey" size="28rpx" />
+	</view>
+</view>
+
+<view class="button">
+	<van-button type="info" loading="{{ buttonLoading }}" loading-text="上传中..." bind:click="onPublic">发布</van-button>
+</view>

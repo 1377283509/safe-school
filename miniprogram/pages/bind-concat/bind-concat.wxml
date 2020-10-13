@@ -1,0 +1,9 @@
+<view class="base">
+	<van-field label="姓名" value="{{ name }}" type="textarea" autosize required placeholder="联系人姓名" bind:change="onInputName" />
+	<van-field label="电话" value="{{ phone }}" type="textarea" autosize required placeholder="联系人电话" bind:change="onInputPhone" />
+	<van-field label="openId" value="{{ concat_openId }}" type="textarea" autosize required placeholder="联系人openId" bind:change="onInputOpenId" />
+</view>
+
+<view class="button">
+	<van-button type="info" loading="{{ buttonLoading }}" loading-text="上传中..." bind:click="onSave">保存</van-button>
+</view>

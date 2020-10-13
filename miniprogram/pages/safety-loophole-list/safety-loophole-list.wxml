@@ -1,0 +1,23 @@
+<view id="sketleton" hidden="{{!isLoading}}">
+	<block wx:for="{{[0,1,2,3,4,5]}}" wx:key="*this">
+		<van-skeleton title avatar row="3" />
+	</block>
+</view>
+
+<view id="list" hidden="{{isloading}}">
+	<block wx:for="{{safety_loophole_list}}" wx:key="_id" wx:for-item="item">
+		<view class="card">
+			<title-bar title="{{item.address}}" iconColor="#0078E0" bgColor="white"></title-bar>
+			<content-cell title="类型" value="{{item.type}}"></content-cell>
+			<content-cell title="描述" content="{{item.description}}"></content-cell>
+			<bottom-bar status="{{item.status}}" isLink="true" url="../safety-loophole-details/safety-loophole-details?id={{item._id}}&isAdmin={{false}}"></bottom-bar>
+		</view>
+	</block>
+</view>
+
+<view hidden="{{!isLoading & showBottom}}" style="text-align:center;padding:20rpx">
+	<van-loading type="spinner" color="gray" size="28rpx" />
+</view>
+<view hidden="{{!showBottom}}">
+	<van-divider contentPosition="center">到底了</van-divider>
+</view>

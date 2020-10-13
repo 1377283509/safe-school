@@ -1,0 +1,8 @@
+	<view class="card">
+		<title-bar leftIcon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/fabu.png" title="活动公告" iconColor="#515151" bgColor="white"></title-bar>
+		<van-field label="公告" type="textarea" autosize placeholder="活动公告" value="{{ message }}" bind:change="onInputMessage" />
+	</view>
+
+	<view class="button" hidden="{{status}}">
+		<van-button type="info" bind:click="onPublic">发布</van-button>
+	</view>

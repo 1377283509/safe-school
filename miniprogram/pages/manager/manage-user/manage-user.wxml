@@ -1,0 +1,18 @@
+<van-search value="{{ searchValue }}" shape="square" background="#0078E0" placeholder="请输入学号或工号" bind:change="onChange" clearable bind:clear="onClear" bind:search="onSearch" />
+<block wx:for="{{dataList}}" wx:key="index">
+	<view class="base">
+		<title-bar leftIcon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/xuesheng.png" title="{{item.name}}" title-class="title" iconColor="#515151" bgColor="white"></title-bar>
+		<van-cell title="{{item.no}}" title-class="title" icon="cloud://safe-school-xlcld.7361-safe-school-xlcld-1301783820/iconicon/id.png" />
+		<van-cell>
+			<view slot="title">
+			<block wx:if="{{ item.canUse }}">
+				<van-tag type="success">可用</van-tag>
+			</block>
+			<block wx:if="{{ !item.canUse }}">
+				<van-tag type="warning">禁用</van-tag>
+			</block>	
+			</view>
+			<van-switch checked="{{ item.canUse }}" size="24px" bind:change="onChangeStatus" data-id="{{item._id}}" />
+		</van-cell>
+	</view>
+</block>

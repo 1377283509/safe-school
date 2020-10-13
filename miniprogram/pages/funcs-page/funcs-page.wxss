@@ -1,0 +1,11 @@
+.base{
+  margin:16rpx 16rpx 0 16rpx;
+  padding: 16rpx;
+  border-radius: 2px;
+  background-color: white;
+}
+
+.message{
+  margin:40rpx 15%;
+  text-align: center;
+}

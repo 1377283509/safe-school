@@ -1,0 +1,16 @@
+.base{
+  margin:16rpx 16rpx 0 16rpx;
+  background-color: white;
+}
+
+.picker{
+  height: 200rpx;
+  position: fixed;
+  bottom: 0;
+}
+
+.button-style{
+  width: 100%;
+  text-align: center;
+  margin-top: 72rpx;
+}

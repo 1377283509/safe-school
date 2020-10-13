@@ -1,0 +1,14 @@
+<view class="base">
+
+  <!-- 图标 -->
+  <view class="status-icon" color="{{color}}">
+    <icon type="{{status}}" size="70"></icon>
+  </view>
+  <!-- 描述 -->
+  <text class="status-description">{{text}}</text>
+  <!-- 按钮 -->
+  <view id="button">
+    <van-button type="info" bind:click="backIndex" size="larger">返回</van-button>
+  </view>
+
+</view>

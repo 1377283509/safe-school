@@ -1,0 +1,13 @@
+<view class="base">
+	<van-cell title="姓名" label="{{data.name}}" />
+	<van-cell title="性别" label="{{data.gender}}" />
+	<van-cell title="手机号" label="{{data.phone}}" />
+	<van-cell title="预约时间" label="{{data.freeTime}}" />
+	<van-cell title="个人介绍" label="{{data.desc}}" />
+	<van-cell title="状态">
+		<van-switch slot="right-icon" center="true" checked="{{ data.status }}" size="24px" bind:change="onChangeStatus" />
+	</van-cell>
+	<view class="button">
+		<van-button type="danger" bind:click="onDelete">删除</van-button>
+	</view>
+</view>

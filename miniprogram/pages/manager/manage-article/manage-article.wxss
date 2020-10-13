@@ -1,0 +1,32 @@
+.panel-style{
+  margin-bottom: 16rpx;
+}
+
+
+.foot-btn{
+  padding: 12rpx 0rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: white;
+}
+
+.button-style{
+  width: 100rpx;
+  height: 50rpx;
+  margin-left: 12rpx;
+  text-align: center;
+  font-size: 24rpx;
+  line-height: 18rpx;
+}
+
+.default-btn{
+  background-color: lightgray;
+  color: black;
+}
+
+.warn-btn{
+  background-color: red;
+  color: white;
+}

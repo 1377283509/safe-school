@@ -1,0 +1,8 @@
+<van-cell value="{{value}}" class="value-class" is-link="{{isLink}}" url="{{url}}">
+	<block wx:if="{{status}}">
+		<van-tag slot="title" type="success">{{text[0]}}</van-tag>
+	</block>
+	<block wx:if="{{!status}}">
+		<van-tag slot="title" type="warning">{{text[1]}}</van-tag>
+	</block>
+</van-cell>

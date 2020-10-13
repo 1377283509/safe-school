@@ -1,0 +1,141 @@
+{
+  "pages": [
+    "pages/index-page/index-page",
+    "pages/funcs-page/funcs-page",
+    "pages/safety-loophole-report/safety-loophole-report",
+    "pages/result-page/result-page",
+    "pages/safety-loophole-list/safety-loophole-list",
+    "pages/safety-loophole-details/safety-loophole-details",
+    "pages/safety-activity-list/safety-activity-list",
+    "pages/safety-activity-details/safety-activity-details",
+    "pages/manager/safety-activity-public/safety-activity-public",
+    "pages/register/register",
+    "pages/stu-register/stu-register",
+    "pages/tea-register/tea-register",
+    "pages/track-position-page/track-position-page",
+    "pages/user-center/user-center",
+    "pages/article-details/article-details",
+    "pages/online-book/online-book",
+    "pages/online-report/online-report",
+    "pages/bind-concat/bind-concat",
+    "pages/manager/append-psychologist/append-psychologist",
+    "pages/manager/public-article/public-article",
+    "pages/manager/manage-article/manage-article",
+    "pages/seek-help/seek-help",
+    "pages/manager/seek-help-list/seek-help-list",
+    "pages/manager/manage-case/manage-case",
+    "pages/manager/manage-safety-loophole/manage-safety-loophole",
+    "pages/manager/manage-user/manage-user",
+    "pages/manager/review-student/review-student",
+    "pages/manager/review-teacher/review-teacher",
+    "pages/manager/manage-activity/manage-activity",
+    "pages/manager/manage-psychologist/manage-psychologist",
+    "pages/psychologist-details/psychologist-details",
+    "pages/my-appointment/my-appointment",
+    "pages/manager/edit-psychologist/edit-psychologist",
+    "pages/manager/manage-appointment/manage-appointment",
+    "pages/manager/appointment-details/appointment-details",
+    "pages/manager/case-details/case-details",
+    "pages/my-case/my-case",
+    "pages/manager/manage-activity-details/manage-activity-details",
+    "pages/manager/edit-notice/edit-notice",
+    "pages/manager/activity-members/activity-menmbers",
+    "pages/my-activities/my-activities",
+    "pages/my-safety-loophole/my-safety-loophole",
+    "pages/search-user-result/search-user-result",
+    "pages/manager/review-user-details/review-user-details",
+    "pages/feed-back/feed-back",
+    "pages/manager/manage-feedback/manage-feedback",
+    "pages/feed-back-detail/feed-back-detail",
+    "pages/experience/experience"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0078E0",
+    "navigationBarTitleText": "平安校园",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar":{
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list":[
+      {
+        "pagePath":"pages/index-page/index-page",
+        "iconPath":"images/icon/shouye.png",
+        "selectedIconPath":"images/icon/shouye-o.png",
+        "text":""
+      },
+      {
+        "pagePath":"pages/funcs-page/funcs-page",
+        "iconPath":"images/icon/all.png",
+        "selectedIconPath":"images/icon/all-o.png",
+        "text":""
+      },
+      {
+        "pagePath":"pages/user-center/user-center",
+        "iconPath":"images/icon/wode.png",
+        "selectedIconPath":"images/icon/wode-o.png",
+        "text":""
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "usingComponents": {    
+    "van-button": "./dist/button/index",
+    "van-field": "./dist/field/index",
+    "van-dropdown-menu": "./dist/dropdown-menu/index",
+    "van-dropdown-item": "./dist/dropdown-item/index",
+    "van-uploader": "./dist/uploader/index",
+    "van-action-sheet": "./dist/action-sheet/index",
+    "van-icon": "./dist/icon/index",
+    "van-picker": "./dist/picker/index",
+    "van-cell": "./dist/cell/index",
+    "van-cell-group": "./dist/cell-group/index",
+    "van-loading": "./dist/loading/index",
+    "van-skeleton": "./dist/skeleton/index",
+    "van-tag": "./dist/tag/index",
+    "van-image": "./dist/image/index",
+    "title-bar":"./components/title-bar/title-bar",
+    "content-cell":"./components/content-cell/content-cell",
+    "bottom-bar":"./components/bottom-bar/bottom-bar",
+    "image-list":"./components/image-list/image-list",
+    "van-grid": "./dist/grid/index",
+    "van-grid-item": "./dist/grid-item/index",
+    "van-overlay": "./dist/overlay/index",
+    "van-divider": "./dist/divider/index",
+    "van-datetime-picker": "./dist/datetime-picker/index",
+    "van-popup": "./dist/popup/index",
+    "van-search": "./dist/search/index",
+    "van-card": "./dist/card/index",
+    "van-radio": "./dist/radio/index",
+    "van-radio-group": "./dist/radio-group/index",
+    "van-dialog": "./dist/dialog/index",
+    "van-switch": "./dist/switch/index",
+    "van-swipe-cell": "./dist/swipe-cell/index",
+    "van-tab": "./dist/tab/index",
+    "van-tabs": "./dist/tabs/index",
+    "van-panel": "./dist/panel/index"
+    },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "定位追踪需要获取您的位置权限"
+    },
+    "openapi":[
+      "serviceMarket.invokeService",
+      "templateMessage.send"
+    ]
+  },
+  "requiredBackgroundModes": [
+    "location"
+  ],
+  "plugins": {
+    "routePlan": {
+    "version": "1.0.6",
+    "provider": "wx50b5593e81dd937a"
+    }
+  }
+}
